@@ -36,6 +36,10 @@ body.dark-mode svg, body.dark-mode .btn-mode {
   color: antiquewhite;
 }
 
+body.dark-mode .btn-mode:hover {
+  border-color: antiquewhite;
+}
+
 body.dark-mode .form-input input, body.dark-mode .form-input textarea {
   color:antiquewhite;
   border-color: antiquewhite;
@@ -82,7 +86,7 @@ textarea {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  overflow-x: auto;
+  overflow-x: visible;
 }
 
 .btn-add {
@@ -115,7 +119,7 @@ th {
 
 td {
  text-decoration: underline;
- padding: 20px;
+ padding: 10px;
  text-align: center;
 }
 
@@ -209,6 +213,19 @@ td {
   cursor: pointer;
 }
 
+.btn-mode:hover {
+  border-bottom: black 2px solid;
+}
+
+.loader-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 85vw;
+}
+
 .loader {
   height: 27px;
   aspect-ratio: 5;
@@ -228,5 +245,27 @@ td {
 @media screen and (max-width: 768px) {
   .hidden {
     display: none;
+  }
+
+  .btn-absolute-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    margin-bottom: 50px;
+  }
+  
+  .btn-absolute {
+    position: relative;
+    border: none;
+  }
+  
+  .arrow {
+    position: absolute;
+    transform: scale(3);
+    rotate: 90deg;
+    cursor: pointer;
+    transition-duration: 0.5s;
   }
 }

@@ -18,7 +18,7 @@ export default function Detail({ students }) {
   }, [id, students]);
 
   if (!studentDetail) {
-    return <div>Loading...</div>;
+    return <div className="loader"></div>;
   }
 
   return (

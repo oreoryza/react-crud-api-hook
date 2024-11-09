@@ -37,7 +37,7 @@ export default function Home({
       <table className="table table-striped table-bordered table-hover table-responsive">
         <thead>
           <tr>
-            <th>No</th>
+            <th className="hidden">No</th>
             <th>{language === "en" ? "Name" : "Nama"}</th>
             <th className="hidden">NIM</th>
             <th>{language === "en" ? "Class" : "Kelas"}</th>
@@ -48,7 +48,7 @@ export default function Home({
         <tbody>
           {students.map((student, index) => (
             <tr key={index}>
-              <td scope="row">{index + 1}</td>
+              <td className="hidden" scope="row">{index + 1}</td>
               <td>{student.name}</td>
               <td className="hidden">{student.nim}</td>
               <td>{student.class}</td>

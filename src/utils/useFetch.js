@@ -56,7 +56,7 @@ const useFetch = () => {
       });
       setData((prevData) =>
         prevData.map((item) => (item.id === id ? res.data.data : item))
-      ); // Update state with modified data
+      );
     } catch (err) {
       setError(err);
     } finally {
