@@ -86,8 +86,22 @@ textarea {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  overflow-x: visible;
+  overflow-x: auto;
+  animation: slideDown 1s;
 }
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 
 .btn-add {
   display: flex;
@@ -130,6 +144,18 @@ td {
   align-items: center;
   gap: 2rem;
   margin-bottom: 100px;
+  animation: slideUp 1s;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .form-group {
@@ -191,6 +217,7 @@ td {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: slideUp 1s;
 }
 
 .detail-card {
